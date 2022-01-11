@@ -8,6 +8,10 @@ This is a fork of Anycubic-3Ds fork of the Marlin 3D printer firmware for their 
 - Added release as default build target
 - Enabled linear advance
 
+## State
+
+It is compiling but I haven't tested this yet on my printer.
+
 ## Configuring and Building on your machine
 
 ### Setup PlatformIO
