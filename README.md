@@ -1,3 +1,35 @@
+# Marlin for Anycubic Vyper
+
+This is a fork of Anycubic-3Ds fork of the Marlin 3D printer firmware for their Vyper.
+
+## Changes over Anycubics fork
+- Added building instruction so it is easier for others to compile their own Vyper firmware.
+- Included the ac_tri_f103 board config file
+- Added release as default build target
+- Enabled linear advance
+
+## Configuring and Building on your machine
+
+### Setup PlatformIO
+
+- [Installation documentation](https://docs.platformio.org/en/latest//core/installation.html)
+- Using the installer script on linux:
+```
+wget https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py -O get-platformio.py
+python3 get-platformio.py
+export PATH=$PATH:~/.platformio/penv/bin
+```
+
+### Firmware compilation
+
+```
+git clone https://github.com/ANYCUBIC-3D/framework-arduinoststm32_vyper ~/.platformio/packages/framework-arduinoststm32
+git clone https://github.com/ANYCUBIC-3D/Vyper
+cd Vyper
+cp ~/.platformio/packages/framework-arduinoststm32/ac_tri_f103re.json buildroot/share/PlatformIO/boards/
+platformio run --environment ac_tri_f1
+```
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
