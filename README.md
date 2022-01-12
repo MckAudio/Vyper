@@ -5,12 +5,13 @@ This is a fork of Anycubic-3Ds fork of the Marlin 3D printer firmware for their 
 ## Changes over Anycubics fork
 - Added building instruction so it is easier for others to compile their own Vyper firmware.
 - Included the ac_tri_f103 board config file
-- Added release as default build target
 - Enabled linear advance
 
 ## State
 
-It is compiling but I haven't tested this yet on my printer.
+I flashed the firmware with linear advance and it seems to work fine on my Vyper. I haven't tested all features, but homing and autoleveling are working. The [K factor calibration pattern](https://marlinfw.org/tools/lin_advance/k-factor.html) works too. I still need to do some test prints to see if I get better prints.
+
+I also tested a release build of the firmware, unfortunately the printer hangs during homing with the release firmware. Maybe this is due to some timeouts in the display firmware.
 
 ## Configuring and Building on your machine
 
